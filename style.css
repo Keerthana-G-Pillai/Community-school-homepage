@@ -1,122 +1,169 @@
-/* ===== ENHANCED STYLING ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
-body {
-    background: #faf8f5;
-    color: #333;
+/* RESET */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-/* Header */
-
-header {
-    background: linear-gradient(135deg, #aa6666, #8b4d4d);
-    color: white;
-    border-bottom: none;
-    border-radius: 0 0 10px 10px;
+body{
+    font-family:'Inter',sans-serif;
+    background:#f5f7fb;
+    color:#2d3748;
+    min-width:980px;
+    max-width:1400px;
+    margin:auto;
+    padding:0 30px;
+    line-height:1.8;
 }
 
-h1 {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#1e3a8a,#2563eb);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    margin-top:20px;
+    border-radius:16px;
+    border:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-/* Section Headings */
-
-h2 {
-    color: #8b4d4d;
-    border-bottom: 2px solid #d6b0b0;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:3rem;
+    letter-spacing:1px;
 }
 
-/* Content Cards */
+/* LAYOUT */
+
+main{
+    display:grid;
+    grid-template-columns:5fr 2fr 2fr;
+    gap:30px;
+    margin:30px 0;
+}
+
+/* CONTENT PANELS */
 
 section,
-aside {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+aside{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
-/* Links */
+/* HEADINGS */
 
-a {
-    color: #aa6666;
-    font-weight: 500;
-    transition: 0.3s;
+h2{
+    font-family:'Playfair Display',serif;
+    color:#1e40af;
+    margin-bottom:15px;
+    border-bottom:3px solid #dbeafe;
+    padding-bottom:8px;
 }
 
-a:hover {
-    color: #d14f4f;
+h2 + p{
+    text-indent:2rem;
 }
 
-/* Lists */
+/* PARAGRAPHS */
 
-ul li,
-ol li {
-    padding: 4px 0;
+p{
+    margin:15px 0;
 }
 
-/* Aside */
+/* LINKS */
 
-aside ul {
-    list-style-type: "📚 ";
+a{
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
 }
 
-/* Navigation */
-
-nav ul {
-    list-style: none;
-    padding: 0;
+a:hover{
+    color:#1e3a8a;
+    text-decoration:underline;
 }
 
-nav li {
-    margin-bottom: 12px;
+/* COURSE LIST */
+
+aside ul{
+    list-style:none;
 }
 
-nav a {
-    display: block;
-    padding: 16px;
-    background: white;
-    border: 2px solid #aa6666;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    color: #aa6666;
-    transition: all 0.3s ease;
+aside li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
 }
 
-nav a:hover {
-    background: #aa6666;
-    color: white;
-    transform: translateY(-2px);
+/* MAIN LISTS */
+
+section ul li,
+section ol li{
+    margin-bottom:10px;
 }
 
-/* Footer */
+/* NAVIGATION */
 
-footer {
-    background: #8b4d4d;
-    color: white;
-    border-top: none;
-    margin-top: 20px;
-    border-radius: 10px 10px 0 0;
+nav ul{
+    list-style:none;
 }
 
-footer p {
-    padding: 15px;
+nav li{
+    margin-bottom:15px;
 }
 
-/* Responsive */
+nav a{
+    display:block;
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:600;
+    border-left:5px solid #2563eb;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
 
-@media (max-width: 1100px) {
-    main {
-        grid-template-columns: 1fr;
+nav a:hover{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    transform:translateX(5px);
+}
+
+/* FOOTER */
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    border:none;
+    border-radius:16px 16px 0 0;
+    margin-bottom:20px;
+}
+
+footer p{
+    text-align:center;
+    padding:20px;
+    margin:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    main{
+        grid-template-columns:1fr;
     }
 
-    nav {
-        margin-top: 20px;
+    body{
+        min-width:auto;
     }
 }
